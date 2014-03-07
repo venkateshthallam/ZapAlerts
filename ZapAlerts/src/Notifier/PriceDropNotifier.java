@@ -52,7 +52,7 @@ public class PriceDropNotifier {
 	public static boolean getCurrentPrice(String productName,float savedPrice) throws IOException, ParseException{
 		float currentPrice=0;
 		boolean isDiscounted=false;
-		URL url = new URL("http://api.zappos.com/Search?term="+productName+"key=5b8384087156eb88dce1a1d321c945564f4d858e");
+		URL url = new URL("http://api.zappos.com/Search?term="+productName+"&key=5b8384087156eb88dce1a1d321c945564f4d858e");
 		HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 
 		if (connection.getResponseCode() != 200) {
