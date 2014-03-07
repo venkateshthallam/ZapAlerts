@@ -112,14 +112,14 @@ public class PriceDropNotifier {
 	//Uses sendgrid API to push the notifications
 	public static void pushNotification(String ProductName,int productId,String email){
 			String username = "venkateshthallam";
-		    String password = "Steve123!";
+		    String password = "passwordforsendgrid";//dummy password
 		    
 		    SendGrid sendgrid = new SendGrid(username, password);
 
 		    sendgrid.addTo(email);
 		    sendgrid.setFrom("venkatesh.thallam@nyu.edu");
 		    sendgrid.setSubject("Hurry Up! The Product "+ProductName+" is on sale now");
-		    sendgrid.setText("Hey, The product you saved is on sale now with more than 20% discount. Go, Zap it, we mean grab it! :) ");
+		    sendgrid.setText("Hey, The product you saved is on sale now with more than 20% discount. Go, Zap it, we mean, grab it! :) ");
 
 		    sendgrid.send();
 	}
